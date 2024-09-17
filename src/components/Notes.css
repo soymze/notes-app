@@ -1,0 +1,30 @@
+.notes{
+    margin-left: 20%;
+    display: flex;
+    margin-right: 22%;
+    width: 58%;
+    margin-top: 2rem;
+}
+
+.card{
+    width: 15rem;
+    margin-left: 1rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.pink{
+    background-color: #FFB3BA;
+}
+
+.yellow{
+    background-color: #FFFACD;
+}
+
+.purple{
+    background-color: #CBAACB;
+}
+
+.inner-text{
+    margin-left: 1rem;
+}
