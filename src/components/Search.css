@@ -4,4 +4,12 @@
     height: 2rem;
     border-radius: 1rem;
     border: 3px solid #FFEDDA;
+    line-height: normal;
+    font-size: 16px;
 }
+
+.search:focus{
+    background-color: #f0f0f0;
+    text-indent: 1.5rem;
+}
+

@@ -1,30 +1,38 @@
-.notes{
+.notes {
     margin-left: 20%;
-    display: flex;
     margin-right: 22%;
     width: 58%;
     margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 eşit sütun oluşturur */
+    gap: 1rem; /* Kartlar arasındaki boşluk */
 }
 
-.card{
-    width: 15rem;
-    margin-left: 1rem;
+.card {
     height: 3rem;
     border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
-.pink{
+.pink {
     background-color: #FFB3BA;
 }
 
-.yellow{
+.yellow {
     background-color: #FFFACD;
 }
 
-.purple{
+.purple {
     background-color: #CBAACB;
 }
 
-.inner-text{
+.inner-text {
     margin-left: 1rem;
+}
+
+.no-notes {
+    color: #FFB830;
 }

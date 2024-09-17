@@ -1,14 +1,31 @@
-import React from 'react'
+import React from 'react';
 import './Notes.css';
+import { useSelector } from 'react-redux';
 
-function Notes() {
+function Notes({ searchTerm }) {
+  const notes = useSelector((state) => state.notes.notes);
+
+
+  const filteredNotes = notes.filter(note =>
+    note.text.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className='notes'>
-        <div className='card pink'><p className='inner-text'>Note 3</p></div>
-        <div className='card yellow'><p className='inner-text'>Note 2</p></div>
-        <div className='card purple'><p className='inner-text'>Note 1</p></div>
+      {filteredNotes.length > 0 ? (
+        filteredNotes.map((note, index) => (
+          <div 
+            key={index} 
+            className={`card ${note.color}`} 
+          >
+            <p className='inner-text'>{note.text}</p> 
+          </div>
+        ))
+      ) : (
+        <p className='no-notes'>No notes found...</p>
+      )}
     </div>
-  )
+  );
 }
 
-export default Notes
+export default Notes;
